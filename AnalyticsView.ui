@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnalyticsView</class>
+ <widget class="QWidget" name="AnalyticsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>992</width>
+    <height>731</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pbLoad">
+         <property name="text">
+          <string>Load</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cmbMachine"/>
+       </item>
+       <item>
+        <widget class="QDateTimeEdit" name="dteStartTime"/>
+       </item>
+       <item>
+        <widget class="QDateTimeEdit" name="dteEndTime"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="DescriptiveAnalysis">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <attribute name="title">
+         <string>Descriptive Analysis</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QTableView" name="tblvMachineProd"/>
+         </item>
+         <item>
+          <widget class="QTableView" name="tblvMachineSpeed"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="FrequencyAnalysis">
+        <attribute name="title">
+         <string>Frequency Analysis</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QTabWidget" name="tab_frequency_main">
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <widget class="QWidget" name="tab_frequency_state">
+            <attribute name="title">
+             <string>State</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QTabWidget" name="qwdg_frequency_state">
+               <property name="currentIndex">
+                <number>2</number>
+               </property>
+               <widget class="QWidget" name="tab_frequency_state_total">
+                <attribute name="title">
+                 <string>Total_time</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <item>
+                  <widget class="QChartView" name="gfxview_statetime_machine"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_frequency_state_avgspeed">
+                <attribute name="title">
+                 <string>Average_speed</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item>
+                  <widget class="QChartView" name="gfxview_avgspeed_state_machine"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_frequency_state_avgprod">
+                <attribute name="title">
+                 <string>Average_production</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <widget class="QChartView" name="gfxview_avgprod_state_machine"/>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_frequency_alarm">
+            <attribute name="title">
+             <string>Alarm</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QTabWidget" name="qwdg_frequency_alarm">
+               <property name="currentIndex">
+                <number>1</number>
+               </property>
+               <widget class="QWidget" name="tab_frequency_alarm_count">
+                <attribute name="title">
+                 <string>Alarm Count</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_22">
+                 <item>
+                  <widget class="QChartView" name="gfxview_alarm_count_machine"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_frequency_alarm_cleartime">
+                <attribute name="title">
+                 <string>Alarm Clear Time</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_23">
+                 <item>
+                  <widget class="QChartView" name="gfxview_alarm_cleartime"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_frequency_alarm_avgcleartime">
+                <attribute name="title">
+                 <string>Average Alarm Clear Time</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_21">
+                 <item>
+                  <widget class="QChartView" name="gfxview_avgclear"/>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_frequency_goodbad">
+            <attribute name="title">
+             <string>Good/Bad</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <widget class="QTabWidget" name="qwdg_frequency_goodbad">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="tab_frequency_goodbad_bad">
+                <attribute name="title">
+                 <string>Good/Bad Production</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_26">
+                 <item>
+                  <widget class="QChartView" name="gfxview_goodbadprod_machine"/>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="TimeSeriesAnalysis">
+        <attribute name="title">
+         <string>Time Series Analysis</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QTabWidget" name="tab_timeseriesanalysis_maintab">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab_timeseries_time">
+            <attribute name="title">
+             <string>Time</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QTabWidget" name="qwdg_timeseries_time">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="tab_avgspeed_time">
+                <attribute name="title">
+                 <string>Average Speed</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QChartView" name="gfxview_avgspeed_time"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_avgprod_time">
+                <attribute name="title">
+                 <string>Average Prod</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QChartView" name="gfxview_avgprod_time"/>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_timeseries_hour">
+            <attribute name="title">
+             <string>Hour</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QTabWidget" name="qwdg_timeseries_hour">
+               <property name="currentIndex">
+                <number>3</number>
+               </property>
+               <widget class="QWidget" name="tab_avgspeed_hour">
+                <attribute name="title">
+                 <string>Average Speed</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QChartView" name="gfxview_avgspeed_hour"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_avgprod_hour">
+                <attribute name="title">
+                 <string>Average Production</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_27">
+                 <item>
+                  <widget class="QChartView" name="gfxview_avgprod_hour"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_goodbadratio_hour">
+                <attribute name="title">
+                 <string>Good/Bad Ratio</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_29">
+                 <item>
+                  <widget class="QChartView" name="gfxview_goodbadratio_hour"/>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_uptime_hour">
+                <attribute name="title">
+                 <string>Uptime Percent</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_30">
+                 <item>
+                  <widget class="QChartView" name="gfxview_uptime_hour"/>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">PyQt6.QtCharts</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
